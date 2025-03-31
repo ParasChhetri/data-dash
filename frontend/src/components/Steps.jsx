@@ -26,7 +26,7 @@ export const Steps = () => {
 
     return (
         <div className="flex w-full flex-col items-center justify-center min-h-screen py-20 px-5 gap-10 bg-blue-50/50">
-            <h1 className="text-3xl md:text-5xl font-extrabold text-[#0D1B2A]">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-[#0D1B2A] my-4">
                 Steps to follow
             </h1>
 
