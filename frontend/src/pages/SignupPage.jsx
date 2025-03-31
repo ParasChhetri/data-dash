@@ -15,40 +15,14 @@ export const SignupPage = () => {
         navigate("/"); // Redirect to login page after registration
     };
     return (
-            <div className="border min-h-screen">
-                <h2>Student Registration Form</h2>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <label>Name</label>
-                    <input {...register("name", { required: "Name is required" })} placeholder="Enter your name" />
+        <div className="min-h-screen w-full flex items-center justify-center py-28 px-8 bg-[url('/img/signup-page-bg-img.jpg')] bg-no-repeat bg-center bg-cover">
+            <div className="backdrop-blur-lg bg-white/10 border border-white/30 shadow-lg rounded-lg flex items-center justify-center gap-2 flex-col px-2 py-4 md:w-[60%] md:px-8">
+                <h2 className="text-2xl font-bold text-white">Signup</h2>
+                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2 w-full">
+                    <label className="font-bold">Name</label>
+                    <input {...register("name", { required: "Name is required" })} placeholder="Enter your name" className="border-[1px] border-gray-500 py-2 px-4 rounded"/>
                     {errors.name && <p>{errors.name.message}</p>}
-
-                    <label>Semester</label>
-                    <select {...register("semester", { required: "Semester is required" })}>
-                        <option value="">Select Semester</option>
-                        <option value="1st">1st</option>
-                        <option value="2nd">2nd</option>
-                        <option value="3rd">3rd</option>
-                        <option value="4th">4th</option>
-                        <option value="5th">5th</option>
-                        <option value="6th">6th</option>
-                    </select>
-                    {errors.semester && <p>{errors.semester.message}</p>}
-
-                    <label>Roll No</label>
-                    <input
-                        type="text"
-                        {...register("rollno", {
-                            required: "Roll number is required",
-                            pattern: {
-                                value: /^[A-Za-z0-9]+$/,
-                                message: "Only letters and numbers are allowed",
-                            },
-                        })}
-                        placeholder="Enter your roll number"
-                    />
-                    {errors.rollno && <p>{errors.rollno.message}</p>}
-
-                    <label>Phone No</label>
+                    <label className="font-bold">Phone No</label>
                     <input
                         type="tel"
                         {...register("phone", {
@@ -59,18 +33,20 @@ export const SignupPage = () => {
                             },
                         })}
                         placeholder="Enter your phone number"
+                        className="border-[1px] border-gray-500 py-2 px-4 rounded"
                     />
                     {errors.phone && <p>{errors.phone.message}</p>}
 
-                    <label>Email</label>
+                    <label className="font-bold">Email</label>
                     <input
                         type="email"
                         {...register("email", { required: "Email is required" })}
                         placeholder="Enter your email"
+                        className="border-[1px] border-gray-500 py-2 px-4 rounded"
                     />
                     {errors.email && <p>{errors.email.message}</p>}
 
-                    <label>Password</label>
+                    <label className="font-bold">Password</label>
                     <input
                         type="password"
                         {...register("password", {
@@ -82,18 +58,19 @@ export const SignupPage = () => {
                             },
                         })}
                         placeholder="Enter a strong password"
+                        className="border-[1px] border-gray-500 py-2 px-4 rounded"
                     />
                     {errors.password && <p>{errors.password.message}</p>}
 
-                    <label>Role</label>
-                    <input type="text" {...register("role")} value="Student" disabled />
 
-                    <button type="submit">Register</button>
+                    <button type="submit" className="bg-blue-500 py-2 my-1.5 rounded font-medium text-white">Signup</button>
                 </form>
 
-                <p className="login-link">
-                    Already have an account? <Link to="/">Login here</Link>
+                <p className="login-link text-sm">
+                    Already have an account? <Link to="/" className="text-white">Login here</Link>
                 </p>
             </div>
+        </div>
+
     );
 }
