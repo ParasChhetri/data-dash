@@ -16,7 +16,7 @@ export const SignupPage = () => {
     };
     return (
         <div className="min-h-screen w-full flex items-center justify-center py-28 px-8 bg-[url('/img/signup-page-bg-img.jpg')] bg-no-repeat bg-center bg-cover">
-            <div className="backdrop-blur-lg bg-white/10 border border-white/30 shadow-lg rounded-lg flex items-center justify-center gap-2 flex-col px-2 py-4 md:w-[60%] md:px-8">
+            <div className="backdrop-blur-lg bg-white/10 border border-white/30 shadow-lg rounded-lg flex items-center justify-center gap-2 flex-col px-2 py-4 md:w-[60%] md:px-8 lg:w-[45%]">
                 <h2 className="text-2xl font-bold text-white">Signup</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2 w-full">
                     <label className="font-bold">Name</label>
@@ -63,11 +63,11 @@ export const SignupPage = () => {
                     {errors.password && <p>{errors.password.message}</p>}
 
 
-                    <button type="submit" className="bg-blue-500 py-2 my-1.5 rounded font-medium text-white">Signup</button>
+                    <button type="submit" className="bg-blue-500 my-2 py-2 rounded-full font-medium text-white">Signup</button>
                 </form>
 
-                <p className="login-link text-sm">
-                    Already have an account? <Link to="/" className="text-white">Login here</Link>
+                <p className=" font-medium text-center">
+                    Already have an account? <Link to="/login" className="text-blue-700">Login here</Link>
                 </p>
             </div>
         </div>

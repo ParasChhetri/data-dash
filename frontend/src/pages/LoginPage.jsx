@@ -10,16 +10,9 @@ const LoginPage = () => {
         navigate("/dashboard"); // Redirect to dashboard after login (if needed)
     };
     return (
-        <div className="flex items-center justify-evenly flex-col md:flex-row">
-            {/* <div className="bg-blue-100 h-screen w-full md:flex md:items-center md:justify-center hidden ">
-                <img src="/img/login-page-img.webp" alt="" className="h-[600px] w-[60%]" />
-            </div> */}
-            <div className="bg-emerald-500"
-                style={{
-                    clipPath: "polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 0 0)"
-                }}
-            ></div>
-            <div className="min-h-screen flex flex-col items-center justify-center gap-4 md:w-[50%]">
+        <div className="min-h-screen w-full flex items-center justify-center py-28 px-8 bg-[url('/img/signup-page-bg-img.jpg')] bg-no-repeat bg-center bg-cover">
+            
+            <div className="backdrop-blur-lg bg-white/10 border border-white/30 shadow-lg rounded-lg flex items-center justify-center gap-2 flex-col px-2 py-4 md:w-[60%] md:px-8 lg:w-[40%] h-[400px]">
                 <h2 className="text-2xl font-bold">Login</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-auto mx-auto gap-2 px-4 ">
                     {/* Email Field */}
@@ -50,11 +43,11 @@ const LoginPage = () => {
                     />
                     {errors.password && <p>{errors.password.message}</p>}
 
-                    <button type="submit" className="bg-blue-500 my-2 py-2 rounded-full">Login</button>
+                    <button type="submit" className="bg-blue-500 my-2 py-2 rounded-full font-medium text-white">Login</button>
                 </form>
 
-                <p className="font-medium">
-                    Not registered? <Link to="/register" className="text-blue-500">Create an account</Link>
+                <p className="text-center font-medium">
+                    Not registered? <Link to="/signup" className="text-blue-700">Create an account</Link>
                 </p>
             </div>
         </div>

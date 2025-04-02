@@ -1,4 +1,5 @@
 import { Steps } from "../components/Steps";
+import { SupportSection } from "../components/SupportSection";
 import { Testimonials } from "../components/Testimonials";
 import { TryForFree } from "../components/TryForFree";
 
@@ -8,6 +9,7 @@ export const HomePage = () => {
             <TryForFree />
             <Steps />
             <Testimonials />
+            <SupportSection />
         </main>
     );
 }
