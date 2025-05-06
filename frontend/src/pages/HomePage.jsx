@@ -1,3 +1,4 @@
+import { Accordion } from "../components/Accordion";
 import { Steps } from "../components/Steps";
 import { SupportSection } from "../components/SupportSection";
 import { Testimonials } from "../components/Testimonials";
@@ -10,6 +11,7 @@ export const HomePage = () => {
             <Steps />
             <Testimonials />
             <SupportSection />
+            <Accordion />
         </main>
     );
 }

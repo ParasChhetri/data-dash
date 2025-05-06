@@ -7,7 +7,7 @@ export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-[#0D1B2A] p-4 z-50 sticky w-full top-0">
+        <nav className="bg-[#0D1B2A] p-4 z-50 fixed w-full top-0">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <h1 className="text-[#E0E1DD] lg:text-2xl font-bold md:text-xl">
